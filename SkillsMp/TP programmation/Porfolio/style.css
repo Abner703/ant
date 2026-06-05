@@ -369,7 +369,43 @@ footer {
 
 }
 
-@media (max-width: 1024px) {
+
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: var(--accent-ambre);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+footer p {
+    color: var(--bg-tech);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a p {
+    color: var(--bg-tech);
+    font-weight: 900;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+}
+
+footer img:hover {
+    transform: translateY(-3px);
+	
+}@media (max-width: 1024px) {
     .Acl {
         flex-direction: column;
         text-align: center;
@@ -419,6 +455,8 @@ footer {
         font-size: 16px;
     }
 }
+
+
 
 	
 
