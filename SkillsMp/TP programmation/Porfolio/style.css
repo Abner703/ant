@@ -230,6 +230,18 @@ em {
 	padding-bottom:2rem ;
     color: var(--accent-ambre) ;
 }
+.progress-bar {
+    height: 100%;
+    background-color: rgb(66, 104, 92);
+}
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
 
 
 /*---------------------------------------------*/
@@ -371,4 +383,4 @@ footer a p {
 }
 
 	
-}
+
