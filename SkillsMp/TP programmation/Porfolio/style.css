@@ -1,7 +1,7 @@
 * {
 	margin: 0 ;
 	padding: 0;
-	box-sizing: 0;
+	box-sizing: border-box;
 }
 
 html {
@@ -27,7 +27,7 @@ header {
 	margin-bottom: 2rem;
 	position: sticky;
 	top:0;
-	background: linear-gradient(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(45px);
 	z-index: 1000;
 
@@ -369,91 +369,267 @@ footer {
 
 }
 
-
-
-/* ==================== FOOTER ==================== */
-footer {
-    background-color: var(--accent-ambre);
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-top: 5rem;
-}
-
 footer p {
-    color: var(--bg-tech);
+	color:var(--bg-tech)
 }
 
 footer a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 footer a p {
-    color: var(--bg-tech);
-    font-weight: 900;
+	color: var(--bg-tech);
+	font-weight: 900;
 }
 
-footer img {
-    width: 24px;
-    height: 24px;
-    transition: 0.3s;
+/* ================================= */
+/* TABLETTE */
+/* ================================= */
+
+@media screen and (max-width: 992px){
+
+	/* Header */
+
+	.header nav ul{
+		gap: 2rem;
+	}
+
+	/* Accueil */
+
+	.acl-sct{
+		margin: 4rem 2rem;
+		padding-bottom: 8rem;
+	}
+
+	.Acl{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 3rem;
+	}
+
+	.bvn-msg{
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.photo img{
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* A propos */
+
+	.aps-sct{
+		margin: 4rem 2rem;
+		padding: 3rem 2rem 8rem;
+	}
+
+	.Aps h2{
+		font-size: 55px;
+	}
+
+	/* Compétences */
+
+	.cpt-sct{
+		margin: 4rem 2rem;
+		padding: 3rem 2rem 8rem;
+	}
+
+	.list-card1,
+	.list-card2{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.card{
+		width: calc(50% - 1rem);
+		padding: 2rem;
+	}
+
+	/* Contact */
+
+	.ctc{
+		margin: 3rem 2rem;
+		padding: 3rem;
+	}
 }
 
-footer img:hover {
-    transform: translateY(-3px);
-	
-}@media (max-width: 1024px) {
-    .Acl {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .cpt-sct h2, .aps-sct h2, .ctc-sct h2 {
-        font-size: 50px;
-    }
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media screen and (max-width: 768px){
+
+	/* Header */
+
+	header{
+		height: auto;
+	}
+
+	.header nav ul{
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+	}
+
+	/* Accueil */
+
+	.acl-sct{
+		margin: 2rem 1rem;
+		padding-bottom: 5rem;
+	}
+
+	.Acl{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 2rem;
+	}
+
+	.bvn-msg{
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.bvn-msg h1{
+		font-size: 28px;
+	}
+
+	.bvn-msg p{
+		font-size: 16px;
+	}
+
+	.photo{
+		width: 100%;
+		max-width: 350px;
+	}
+
+	.photo img{
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	/* A propos */
+
+	.aps-sct{
+		margin: 2rem 1rem;
+		padding: 2rem 1rem 5rem;
+	}
+
+	.Aps h2{
+		font-size: 40px;
+	}
+
+	.Aps p{
+		font-size: 16px;
+		line-height: 1.8;
+	}
+
+	/* Compétences */
+
+	.cpt-sct{
+		margin: 2rem 1rem;
+		padding: 2rem 1rem 5rem;
+	}
+
+	.cpt-sct h2{
+		font-size: 40px;
+	}
+
+	.list-card1,
+	.list-card2{
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.card{
+		width: 100%;
+		padding: 2rem 1.5rem;
+	}
+
+	.card h3{
+		font-size: 20px;
+	}
+
+	/* Contact */
+
+	.ctc-sct{
+		margin: 2rem 1rem;
+		padding: 2rem 1rem;
+	}
+
+	.ctc-sct h2{
+		font-size: 40px;
+	}
+
+	.ctc-sct p{
+		font-size: 16px;
+		line-height: 1.8;
+	}
+
+	.ctc{
+		margin: 2rem 0;
+		padding: 2rem 1rem;
+	}
+
+	.ctc-tl h3{
+		margin: 0;
+		text-align: center;
+	}
+
+	.ipt-cls input,
+	.ipt-msg textarea{
+		font-size: 16px;
+	}
+
+	.sbt-btn button{
+		width: 100%;
+		margin: 2rem 0 0;
+	}
+
+	/* Footer */
+
+	footer{
+		flex-direction: column;
+		height: auto;
+		padding: 1.5rem;
+		text-align: center;
+	}
+
+	footer img{
+		width: 30px;
+		height: 30px;
+	}
 }
 
-@media (max-width: 768px) {
-    .header nav ul {
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-    
-    .acl-sct, .aps-sct, .cpt-sct {
-        margin: 2rem;
-        padding: 2rem;
-    }
-    
-    .bvn-msg h1 {
-        font-size: 32px;
-    }
-    
-    .card {
-        min-width: 100%;
-    }
-    
-    .ctc {
-        padding: 1.5rem;
-    }
-    
-    footer {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-}
 
-@media (max-width: 480px) {
-    .cpt-sct h2, .aps-sct h2, .ctc-sct h2 {
-        font-size: 32px;
-    }
-    
-    .Aps p {
-        font-size: 16px;
-    }
+/* ================================= */
+/* PETITS SMARTPHONES */
+/* ================================= */
+
+@media screen and (max-width: 480px){
+
+	.bvn-msg h1{
+		font-size: 24px;
+	}
+
+	.Aps h2,
+	.cpt-sct h2,
+	.ctc-sct h2{
+		font-size: 32px;
+	}
+
+	.card{
+		padding: 1.5rem 1rem;
+	}
+
+	.photo{
+		padding: 15px;
+	}
 }
 
 
